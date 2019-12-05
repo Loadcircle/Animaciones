@@ -1,0 +1,228 @@
+body{
+    margin: 0;
+}
+.holder{
+    padding: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rebeccapurple;
+    width: 40vw;
+}
+.holder > div{
+    perspective: 1000vw;
+    background: rgba(0,0,0,.6);
+}
+.holder > div:nth-child(1){
+    grid-row: 1/3;
+}
+.border_hoder_3{
+    grid-column: 2;
+}
+.cubo{
+    width: 10vw;
+    height: 10vw;
+    position: relative;
+    margin: auto;
+    transform-style: preserve-3d;
+    margin: 5vw auto;
+}
+
+.cubo > div{
+    width: 10vw;
+    height: 10vw;
+    background: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    position: absolute;
+    font-weight: bold;
+    border: solid 1px black;
+}
+.front{
+    transform: translateZ(5vw);
+}
+.back{
+    transform: translateZ(-5vw) rotateY(180deg);
+}
+.right{
+    transform: translateX(5vw) rotateY(90deg);
+}
+.left{
+    transform: translateX(-5vw) rotateY(-90deg);
+}
+.bottom{
+    transform: translateY(5vw) rotateX(-90deg);
+}
+.top{
+    transform: translateY(-5vw) rotateX(90deg);
+}
+
+
+
+
+
+
+
+.seg_cubo{
+    height: 8vw;
+    width: 20vw;
+}
+.seg_cubo > div{
+    width: 20vw;
+    height: 8vw;
+    background: orangered;
+}
+.seg_cubo .left, .seg_cubo .right{
+    width: 8vw;
+}
+
+.seg_cubo .front{
+    transform: translateZ(4vw);
+}
+.seg_cubo .back{
+    transform: translateZ(-4vw) rotateY(180deg);
+}
+.seg_cubo .right{
+    transform: translateX(16vw) rotateY(90deg);
+}
+.seg_cubo .left{
+    transform: translateX(-4vw) rotateY(-90deg);
+}
+.seg_cubo .bottom{
+    transform: translateY(4vw) rotateX(-90deg);
+}
+.seg_cubo .top{
+    transform: translateY(-4vw) rotateX(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+.terc_cubo{
+    height: 25vw;
+    width: 8vw;
+}
+.terc_cubo > div{
+    width: 8vw;
+    height: 25vw;
+    background: orangered;
+}
+.terc_cubo .top, .terc_cubo .bottom{
+    height: 8vw;
+}
+
+.terc_cubo .front{
+    transform: translateZ(4vw);
+}
+.terc_cubo .back{
+    transform: translateZ(-4vw) rotateY(180deg);
+}
+.terc_cubo .right{
+    transform: translateX(4vw) rotateY(90deg);
+}
+.terc_cubo .left{
+    transform: translateX(-4vw) rotateY(-90deg);
+}
+.terc_cubo .bottom{
+    transform: translateY(21vw) rotateX(-90deg);
+}
+.terc_cubo .top{
+    transform: translateY(-4vw) rotateX(90deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+.border_holder, .border_hoder_2, .border_hoder_3{
+    border: solid 3vw rebeccapurple;
+    width: 9vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 2vw;
+    padding-top: 0vw;
+    position: relative;
+}
+.border_holder::before,
+.border_hoder_2:before,
+.border_hoder_3:before{
+    content: '';
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: rebeccapurple;
+    height: 2.5vw;
+}
+
+.border_hoder_2{
+    width: 16vw;
+    padding-bottom: 4vw;
+    padding-top: 0vw;
+}
+.border_hoder_2:before{
+    height: 4vw;
+}
+
+.border_hoder_3{
+    width: 24vw;
+    padding-bottom: 7vw;
+    padding-top: 0vw;
+}
+.border_hoder_3:before{
+    height: 7vw;
+}
+
+.terc_cubo{
+    margin-top: -2vw!important;
+    margin-left: 2vw!important;
+}
+
+.seg_cubo, .terc_cubo, .primer_cubo{
+    transform:rotateX(-25deg) rotateY(-30deg);
+    animation: rotar_linear infinite ease 4s;
+    margin: 0;
+}
+.seg_cubo{
+    animation: rotar_linear infinite ease 4s;
+    animation-delay: .4s;
+}
+.primer_cubo{
+    animation: rotar_linear infinite ease 4s;
+    animation-delay: .8s;
+}
+
+@keyframes rotar{
+    to{
+        transform:rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+
+@keyframes rotar_linear{
+    0%{
+        transform:rotateX(-25deg) rotateY(-30deg);
+    }
+    70%{
+        transform:rotateX(-25deg) rotateY(330deg);
+    }
+    100%{
+        transform:rotateX(-25deg) rotateY(330deg);
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            height: 400vh;
+            padding: 10vw;
+        }    
+        p{
+            font-size: 5vw;
+            font-weight: bold;
+        }
+    </style>
+    
+    <p class="lax" data-lax-preset="spin fadeInOut">Look at me goooooo!</p>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <p class="lax" data-lax-preset="slalom">Look at me goooooo!</p>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <p class="lax" data-lax-preset="spinRev">Look at me goooooo!</p>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <p class="lax" data-lax-preset="driftLeft">Look at me goooooo!</p>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <p class="lax" data-lax-preset="zoomInOut">Look at me goooooo!</p>
+    <br><br><br><br><br>
+    <p class="lax" data-lax-preset="speedy">Look at me goooooo!</p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+    
+    window.onload = function() {
+        lax.setup() // init
+
+        const updateLax = () => {
+            lax.update(window.scrollY)
+            window.requestAnimationFrame(updateLax)
+        }
+
+        window.requestAnimationFrame(updateLax)
+    }
+
+    </script>
+</body>
+</html>
