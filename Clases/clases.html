@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            padding: 1vw;
+            background-color: rebeccapurple;
+        }
+        ul{
+            background-color: #fafafa;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .6s;
+        }
+        #navegador.active ul{
+            max-height: 77px;
+        }
+        #btn_hamburguesa{
+            cursor: pointer;
+            transition: all .6s;
+            animation: animacion 1s linear forwards;
+        }
+
+        #btn_hamburguesa:hover{
+
+        }
+
+
+
+        @keyframes animacion{
+            from{
+                transform: rotate(0);
+            }
+            to{
+                transform: rotate(245deg);
+            }
+        }
+
+/*
+        @keyframes animacion{
+            to{
+
+            }
+        }
+
+        @keyframes animacion{
+            0%{
+
+            }
+            10%{
+
+            }
+            50%{
+
+            }
+            100%{
+
+            }
+        } */
+        .desplegable{
+            max-height: 0;
+            overflow: hidden;
+            background: blue;
+            padding: 1vw;
+            color: blue;
+        }
+
+        .desplegable.active{
+            color: #fff;
+        }
+    </style>
+
+    <header>
+        <nav id="navegador">
+            <img id="btn_hamburguesa" src="https://via.placeholder.com/150" alt="img">
+
+            <ul>
+                <li>Lista</li>
+                <li>Lista</li>
+                <li>Lista</li>
+                <li>Lista</li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="div">Hello</div>
+
+    <div class="clase">bay</div>
+
+    <div class="clase">bay</div>
+
+    
+
+    <div class="desplegable">
+        INFORMACIÓN
+    </div>
+    <div class="desplegable">
+        INFORMACIÓN
+    </div>
+    <div class="desplegable">
+        INFORMACIÓN
+    </div>
+    <div class="desplegable">
+        INFORMACIÓN
+    </div>
+
+
+    <script src="script.js" defer></script>
+    <script src="script_2.js" defer></script>
+
+</body>
+</html>
